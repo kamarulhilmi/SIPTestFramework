@@ -30,8 +30,6 @@ namespace SIPTests
 
         internal void AddNewUserConfirm()
         {
-            
-
             var logoutButton = Driver.FindElement(By.Id("menu2"));
             logoutButton.Click();
             logoutButton.Click();

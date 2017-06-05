@@ -34,8 +34,10 @@ namespace SIPTests
                 "Test Engineer",
                 "kamarulhilmi@recogine.com",
                 "Damansara",
-                "AutomationTesting",
-                "auto",
+                "AutomationTesting", //username
+                "Operation", //usergroupName
+                "auto", //password
+                "Female", 
                 "0135906715",
                 "1991/01/05",
                 "auto"

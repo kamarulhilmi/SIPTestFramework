@@ -26,7 +26,7 @@ namespace SIPTests
 
         }
 
-        public void AddUser(string name, string position, string email, string address, string username, string password, string contactNumber, string dob, string confirmPassword)
+        public void AddUser(string name, string position, string email, string address, string username, string usergroupName, string password, string gender, string contactNumber, string dob, string confirmPassword)
         {
             var uploadPic = Driver.FindElement(By.Id("addProfileImg"));
             uploadPic.SendKeys(@"C:\library\kam.PNG");
@@ -48,36 +48,23 @@ namespace SIPTests
 
             var userGroup = Driver.FindElement(By.Id("usergroup"));
             userGroup.Click();
+            userGroup.SendKeys(usergroupName);
             userGroup.Click();
-
-            //Actions action = new Actions(webDriver);
-            //var dropDownMenuForUserGroup = Driver.FindElement(By.XPath("//[contains(text(),'Supervisor')]"));
-            //Assert.IsTrue(Pages.AddNewUser.UsergroupIsVisible(), "UserGroup dropdown menu is not visible");
-            //action.MoveToElement(dropDownMenuForUserGroup).Build().Perform();
-            //dropDownMenuForUserGroup.Click();
-
+            
             var passwordField = Driver.FindElement(By.Id("password"));
             passwordField.SendKeys(password);
             
             var genderField = Driver.FindElement(By.Id("gender"));
             genderField.Click();
+            genderField.SendKeys(gender);
             genderField.Click();
-
-            //var dropDownMenuForGender = Driver.FindElement(By.XPath("Female"));
-            //action.MoveToElement(dropDownMenuForGender).Build().Perform();
-            //dropDownMenuForGender.Click();
-
+            
             var contactNumberField = Driver.FindElement(By.Id("contactNumber"));
             contactNumberField.SendKeys(contactNumber);
 
             var dobField = Driver.FindElement(By.Id("dob"));
             dobField.SendKeys(dob);
             dobField.Click();
-
-            //var scrollUpButton = Driver.FindElement(By.Id("scrollUp"));
-            //scrollUpButton.Click();
-            //var scrollDownButton = Driver.FindElement(By.Id("scrollDown"));
-            //scrollDownButton.Click();
 
             var confirmPasswordField = Driver.FindElement(By.Id("confirmPassword"));
             confirmPasswordField.SendKeys(confirmPassword);
