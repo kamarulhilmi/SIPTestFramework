@@ -77,9 +77,9 @@ namespace SIPTests
             Goto("");
         }
 
-        public static void Close()
+        public static void Quit()
         {
-            webDriver.Close();
+            webDriver.Quit();
         }
 
         public static void Goto(string relativeUrl)

@@ -18,7 +18,7 @@ namespace SIPTests
         [TestCleanup]
         public static void Cleanup()
         {
-            Browser.Close();
+            Browser.Quit();
         }
 
     }
