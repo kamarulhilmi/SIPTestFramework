@@ -65,7 +65,6 @@
     <Compile Include="Browser.cs" />
     <Compile Include="EditUserPage.cs" />
     <Compile Include="LoginPage.cs" />
-    <Compile Include="MainMenu.cs" />
     <Compile Include="MapDashboardPage.cs" />
     <Compile Include="Pages.cs" />
     <Compile Include="TC07_NewUserPasswordSuccessfullyReset.cs" />
